@@ -13,7 +13,8 @@ const server  = app.listen(55555, () => {
   const { exec } = require('child_process');
   exec('cat ~/cardano/cfg/pid.bf', (x,o,e) => {
     API = new BlockFrostAPI({
-      projectId: o == null ? 'YOUR API KEY' : o.trim()
+      projectId: o == null || o.trim().length == 0 ?
+        'YOUR API KEY' : o.trim()
     });
   });
 });

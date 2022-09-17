@@ -3,8 +3,8 @@ My attempt to deploy React/[blockfrost-js](https://github.com/blockfrost/blockfr
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 <img src="frontend/screenshots/0_HomePage0.png"/>
 
-### /package.json/scripts
-The scripts in [`/package.json`](package.json) are meant to be run by Heroku.
+### [`/package.json/scripts`](package.json#L5)
+The scripts in [`/package.json`](package.json#L5) are meant to be run by Heroku.
 ```json
 "scripts": {
   "start": "cd backend && npm run build && npm start",
@@ -22,6 +22,13 @@ sudo snap install heroku
 ```
 heroku login
 heroku git:remote -a <HEROKU_APP_NAME>
+```
+
+#### Config vars
+Config vars at Heroku app dashboard:
+```
+- HEROKU = just an arbitrary boolean to indicate local vs Heroku environment
+- BF_PID = Blockfrost API Key
 ```
 
 #### Workflow

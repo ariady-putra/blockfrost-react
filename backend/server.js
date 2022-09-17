@@ -21,7 +21,8 @@ const server  = app.listen(env.HEROKU && env.PORT || 55555, () => {
 });
 
 const path = require('path');
-app.use(express.static(path.resolve(__dirname, './build')));
+const frontendBuild = '../frontend/build';
+app.use(express.static(path.resolve(__dirname, frontendBuild)));
 
 app.get('/latestBlock', function(req, rsp) {
   run(API.blocksLatest(), rsp);
@@ -44,6 +45,6 @@ app.get('/pools', function(req, rsp) {
 });
 
 app.get('*', function(req, rsp) { // Any other GET requests
-  rsp.sendFile(path.resolve(__dirname, './build', 'index.html'));
+  rsp.sendFile(path.resolve(__dirname, frontendBuild, 'index.html'));
 });
 

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "React & blockfrost-js on Heroku",
   "scripts": {
-    "start": "node backend/server",
+    "start": "cd backend && npm run build && npm start",
     "build": "cd frontend && npm i && npm run build"
   },
   "repository": {

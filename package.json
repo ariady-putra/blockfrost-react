@@ -2,9 +2,12 @@
   "name": "blockfrost-heroku",
   "version": "0.1.0",
   "description": "React & blockfrost-js on Heroku",
+  "dependencies": {
+    "react-scripts": "^5.0.1"
+  },
   "scripts": {
     "start": "node backend/server",
-    "build": "cd frontend && npm i && react-scripts build"
+    "build": "npm i && cd frontend && npm i && react-scripts build"
   },
   "repository": {
     "type": "git",

@@ -1,19 +1,19 @@
 {
-  "name": "blockfrost-heroku",
+  "name": "backend",
   "version": "0.1.0",
-  "description": "React & blockfrost-js on Heroku",
+  "description": "Backend API endpoints",
+  "main": "server.js",
   "scripts": {
-    "start": "node backend/server",
-    "build": "cd frontend && npm i && react-scripts build"
+    "start": "node server",
+    "build": "npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ariady-putra/blockfrost-react.git"
   },
   "keywords": [
-    "blockfrost",
-    "react",
-    "heroku"
+    "blockfrost"
   ],
   "author": "Ariady Putra",
   "license": "ISC",
@@ -21,7 +21,8 @@
     "url": "https://github.com/ariady-putra/blockfrost-react/issues"
   },
   "homepage": "https://github.com/ariady-putra/blockfrost-react#readme",
-  "engines": {
-    "node": "v14.20.0"
+  "dependencies": {
+    "@blockfrost/blockfrost-js": "^5.0.0",
+    "express": "^4.18.1"
   }
 }

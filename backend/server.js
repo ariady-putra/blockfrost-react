@@ -7,17 +7,21 @@ async function run(api, rsp) {
 
 var API;
 
+const { env } = require('process');
 const express = require('express');
 const app     = express();
-const server  = app.listen(55555, () => {
+const server  = app.listen(env.HEROKU && env.PORT || 55555, () => {
   const { exec } = require('child_process');
   exec('cat ~/cardano/cfg/pid.bf', (x,o,e) => {
     API = new BlockFrostAPI({
       projectId: o == null || o.trim().length == 0 ?
-        'YOUR API KEY' : o.trim()
+        env.BF_PID : o.trim()
     });
   });
 });
+
+const path = require('path');
+app.use(express.static(path.resolve(__dirname, './build')));
 
 app.get('/latestBlock', function(req, rsp) {
   run(API.blocksLatest(), rsp);
@@ -37,5 +41,9 @@ app.get('/health', function(req, rsp) {
 
 app.get('/pools', function(req, rsp) {
   run(API.pools({ order: 'desc' }), rsp);
+});
+
+app.get('*', function(req, rsp) { // Any other GET requests
+  rsp.sendFile(path.resolve(__dirname, './build', 'index.html'));
 });
 

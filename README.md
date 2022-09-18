@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Porter will run "start" [script](package.json#L5).
 ```json
 "scripts": {
-  "start": "npm run build && cd backend && npm start",
+  "start": "cd backend && npm start",
   "build": "cd frontend && npm run build"
 }
 ```

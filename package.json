@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "React/blockfrost-js deployed on Porter",
   "scripts": {
-    "start": "npm run build && cd backend && npm start",
+    "start": "cd backend && npm start",
     "build": "cd frontend && npm run build"
   },
   "repository": {

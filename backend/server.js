@@ -10,7 +10,7 @@ var API;
 const { env } = require('process');
 const express = require('express');
 const app     = express();
-const server  = app.listen(env.HEROKU ? env.PORT : 55555, () => {
+const server  = app.listen(env.PORT || 55555, () => {
   const { exec } = require('child_process');
   exec('cat ~/cardano/cfg/pid.bf', (x,o,e) => {
     API = new BlockFrostAPI({

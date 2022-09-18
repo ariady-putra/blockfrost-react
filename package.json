@@ -1,26 +1,26 @@
 {
-  "name": "blockfrost-heroku",
+  "name": "blockfrost-porter",
   "version": "0.1.0",
-  "description": "React & blockfrost-js on Heroku",
+  "description": "React/blockfrost-js deployed on Porter",
   "scripts": {
-    "start": "cd backend && npm start",
+    "start": "npm run build && cd backend && npm start",
     "build": "cd frontend && npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ariady-putra/blockfrost-react.git"
+    "url": "git+https://github.com/ariady-putra-sandbox/blockfrost-porter.git"
   },
   "keywords": [
     "blockfrost",
     "react",
-    "heroku"
+    "porter"
   ],
   "author": "Ariady Putra",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ariady-putra/blockfrost-react/issues"
+    "url": "https://github.com/ariady-putra-sandbox/blockfrost-porter/issues"
   },
-  "homepage": "https://github.com/ariady-putra/blockfrost-react#readme",
+  "homepage": "https://github.com/ariady-putra-sandbox/blockfrost-porter#readme",
   "engines": {
     "node": "v14.20.0"
   }

@@ -7,8 +7,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 The scripts in [`/package.json`](package.json#L5) are meant to be run by Heroku.
 ```json
 "scripts": {
-  "start": "cd backend && npm run build && npm start",
-  "build": "cd frontend && npm i && npm run build"
+  "start": "cd backend && npm start",
+  "build": "cd frontend && npm run build"
 }
 ```
 

@@ -1,40 +1,21 @@
-# Heroku React/blockfrost-js
-React/[blockfrost-js](https://github.com/blockfrost/blockfrost-js) deployed on [Heroku](https://react-blockfrost.herokuapp.com). 
+# Porter React/blockfrost-js
+React/[blockfrost-js](https://github.com/blockfrost/blockfrost-js) deployed on [Porter](https://porter.run). 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 <img src="frontend/screenshots/0_HomePage0.png"/>
 
 ### [`/package.json/scripts`](package.json#L5)
-The scripts in [`/package.json`](package.json#L5) are meant to be run by Heroku.
+Porter will run "start" [script](package.json#L5).
 ```json
 "scripts": {
-  "start": "cd backend && npm start",
+  "start": "npm run build && cd backend && npm start",
   "build": "cd frontend && npm run build"
 }
 ```
 
-## Heroku-Git workflow
-#### Prerequisite
-```
-sudo snap install heroku
-```
-
+## Porter-Git workflow
 #### Initialization
+Environment variables at Porter app dashboard:
 ```
-heroku login
-heroku git:remote -a <HEROKU_APP_NAME>
-```
-
-#### Config vars
-Config vars at Heroku app dashboard:
-```
-- HEROKU = just an arbitrary boolean to indicate local vs Heroku environment
 - BF_PID = Blockfrost API Key
-```
-
-#### Workflow
-```
-git status
-git add .
-git commit -m "Commit message"
-git push heroku main
+- PORT = Container Port
 ```

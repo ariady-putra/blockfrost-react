@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### `npm start`
 Runs the app concurrently with [`node ../backend/server.js`](../backend/server.js) (for frontend development).\
-For Heroku deployment see [`/README.md`](../README.md). \
+For Porter deployment see [`/README.md`](../README.md). \
 \
 [`package.json`](package.json#L16):
 ```json

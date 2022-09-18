@@ -1,5 +1,5 @@
-# blockfrost-heroku
-My attempt to deploy React/[blockfrost-js](https://github.com/blockfrost/blockfrost-js) on [Heroku](https://react-blockfrost.herokuapp.com). 
+# Heroku React/blockfrost-js
+React/[blockfrost-js](https://github.com/blockfrost/blockfrost-js) deployed on [Heroku](https://react-blockfrost.herokuapp.com). 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 <img src="frontend/screenshots/0_HomePage0.png"/>
 

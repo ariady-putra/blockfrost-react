@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <img src="frontend/screenshots/0_HomePage0.png"/>
 
 ### [`/package.json/scripts`](package.json#L5)
-Porter will run "start" [script](package.json#L5).
+The scripts in [`/package.json`](package.json#L5) are meant to be run by Porter.
 ```json
 "scripts": {
   "start": "cd backend && npm start",

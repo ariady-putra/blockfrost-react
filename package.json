@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ariady-putra-sandbox/blockfrost-porter.git"
+    "url": "git+https://github.com/ariady-putra/blockfrost-react.git"
   },
   "keywords": [
     "blockfrost",
@@ -18,9 +18,9 @@
   "author": "Ariady Putra",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ariady-putra-sandbox/blockfrost-porter/issues"
+    "url": "https://github.com/ariady-putra/blockfrost-react/issues"
   },
-  "homepage": "https://github.com/ariady-putra-sandbox/blockfrost-porter#readme",
+  "homepage": "https://github.com/ariady-putra/blockfrost-react#readme",
   "engines": {
     "node": "v14.20.0"
   }
